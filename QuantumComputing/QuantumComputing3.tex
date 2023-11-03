@@ -94,4 +94,22 @@ $$\begin{bmatrix}
         1\\
         0
     \end{bmatrix}\\$$   Looking at this we realise that there is also a 50 percent chance of passing through the third lens from the second lens. We conclude, with the final note that only $$\frac{1}{2} \cdot \frac{1}{2} = \boxed{\frac{1}{4}}$$ of the photons will pass through all three lenses $\ket{\uparrow}, \ket{\rightarrow}, \ket{\nearrow}$. Proving the three-polarizer paradox.
+
+\section{Entangled and separate qubits}
+
+There are many situations where qubits are not entangled, one of which is shown below:
+
+$$\frac{1}{2\sqrt{2}}\ket{a_{0}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{a_{0}}\ket{b_{1}}+\frac{1}{2\sqrt{2}}\ket{a_{1}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{a_{1}}\ket{b_{1}}$$
+Assigning
+$$r=\frac{1}{2\sqrt{2}}, s=\frac{\sqrt{3}}{2\sqrt{2}}, t=\frac{1}{2\sqrt{2}}, u=\frac{\sqrt{3}}{2\sqrt{2}}$$ we notice that $rs=tu$, thus the qubits are not entangled. With this, we can set up to separate them. Turning this into two separate parts we have: 
+$$(\frac{1}{2\sqrt{2}}\ket{a_{0}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{a_{0}}\ket{b_{1}})+(\frac{1}{2\sqrt{2}}\ket{a_{1}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{a_{1}}\ket{b_{1}})$$
+$$=\ket{a_{0}}(\frac{1}{2\sqrt{2}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{b_{1}})+\ket{a_{1}}(\frac{1}{2\sqrt{2}}\ket{b_{0}}+\frac{\sqrt{3}}{2\sqrt{2}}\ket{b_{1}})$$
+$$=\frac{1}{\sqrt{2}}\ket{a_{0}}(\frac{1}{2}\ket{b_{0}}+\frac{\sqrt{3}}{2}\ket{b_{1}})+\frac{1}{\sqrt{2}}\ket{a_{1}}(\frac{1}{2}\ket{b_{0}}+\frac{\sqrt{3}}{2}\ket{b_{1}})$$
+$$=(\frac{1}{\sqrt{2}}\ket{a_{0}}+\frac{1}{\sqrt{2}}\ket{a_{1}})(\frac{1}{2}\ket{b_{0}}+\frac{\sqrt{3}}{2}\ket{b_{1}})$$
+Looking at this we see that both of these are independent of each other, further strengthening intuition on how they are both not entangled. Below we have an example where both qubits are entangled.
+
+$$\frac{1}{2}\ket{a_{0}}\ket{b_{0}}+\frac{1}{2}\ket{a_{0}}\ket{b_{1}}+\frac{1}{\sqrt{2}}\ket{a_{1}}\ket{b_{0}}+0\ket{a_{1}}\ket{b_{1}}$$
+
+Looking above we notice how the outer and inner products are not* the same, thus the qubits are both entangled. Trying to simplify both sides will leave an equation that is not factorable, different than the non-entangled case. This is a very curious phenomenon for both the qubits can change each other no matter how far apart they are. However, it is important to note that qubit communication cannot* travel faster than light. However what we will look at next, hypothetically* will.
+
 \end{document}
