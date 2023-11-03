@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Quantum Computing, probability}
+\author{quasimommy-chan}
+\date{November 2023}
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+\section{Three polarizer paradox}
+
+we can find the probability of a state by using the probability matrices listed below.
+
+$$\begin{bmatrix}
+    \begin{bmatrix}
+        cos(\theta)\\
+        -sin(\theta)
+    \end{bmatrix}
+    &,
+    \begin{bmatrix}
+        sin(\theta)\\
+        cos(\theta)
+    \end{bmatrix}\\
+\end{bmatrix}$$
+
+    Inputting $90\degree$ degrees, $0\degree$ degrees and $45\degree$ degrees we have:
+
+$$\begin{bmatrix}
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}
+    &
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\
+\end{bmatrix},
+\begin{bmatrix}
+    \begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}
+    &
+    \begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}\\
+\end{bmatrix},
+\begin{bmatrix}
+    \begin{bmatrix}
+        \frac{\sqrt{2}}{2}\\
+        -\frac{\sqrt{2}}{2}
+    \end{bmatrix}
+    &
+    \begin{bmatrix}
+        \frac{\sqrt{2}}{2}\\
+        \frac{\sqrt{2}}{2}
+    \end{bmatrix}\\
+\end{bmatrix}$$
+
+    Because of this, photons that pass through the first filter will be polarized vertically:  $\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\$, Otherwise known as $\ket{\uparrow}$. Since all photons pass through the first filter, there is still 100 percent of photons remaining. Passing through the $0\degree$ filter from the first filter results in 0 percent passing through. This is because: $$\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\ = \boxed{0}\begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}\\ + 1\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\$$   Thus, because $0^{2}=0$, with a $90\degree$ and $0\degree$ polarizing lens, no photons will pass through. However, placing the second $45\degree$ filter between them, or $\ket{\nearrow}$ will change the probability. Looking below we see that $$\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\ = \boxed{\frac{1}{\sqrt{2}}}\begin{bmatrix}
+        \frac{1}{\sqrt{2}}\\
+        -\frac{1}{\sqrt{2}}
+    \end{bmatrix}\\ + \frac{1}{\sqrt{2}}\begin{bmatrix}
+        \frac{1}{\sqrt{2}}\\
+        \frac{1}{\sqrt{2}}
+    \end{bmatrix}\\$$
+    Therefore there is a $(\frac{1}{\sqrt{2}})^{2} = \frac{1}{2}$ chance that a photon will pass through either lens. Now, we have to consider the final lens, $$\begin{bmatrix}
+        \frac{1}{\sqrt{2}}\\
+        -\frac{1}{\sqrt{2}}
+    \end{bmatrix}\\ = \boxed{-\frac{1}{\sqrt{2}}}\begin{bmatrix}
+        0\\
+        1
+    \end{bmatrix}\\+ \frac{1}{\sqrt{2}}\begin{bmatrix}
+        1\\
+        0
+    \end{bmatrix}\\$$   Looking at this we realise that there is also a 50 percent chance of passing through the third lens from the second lens. We conclude, with the final note that only $$\frac{1}{2} \cdot \frac{1}{2} = \boxed{\frac{1}{4}}$$ of the photons will pass through all three lenses $\ket{\uparrow}, \ket{\rightarrow}, \ket{\nearrow}$. Proving the three-polarizer paradox.
+\end{document}
