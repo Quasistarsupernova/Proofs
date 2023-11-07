@@ -4,29 +4,30 @@
 \title{Ramanujan summations}
 \author{QuasiStar}
 \date{November 2023}
+\usepackage{amssymb}
 
 \begin{document}
 
 \maketitle
 \section{Formula}
 
-$$\frac{f\left(0\right)}{2}+\sum_{n=1}^{\infty}f\left(n\right) \stackrel{\mathbb{ℜ}}{=} i\int_{0}^{\infty}\frac{f\left(it\right)-f\left(-it\right)}{e^{2\pi t}-1}dt$$
+$$\frac{f\left(0\right)}{2}+\sum_{n=1}^{\infty}f\left(n\right) \stackrel{R}{=} i\int_{0}^{\infty}\frac{f\left(it\right)-f\left(-it\right)}{e^{2\pi t}-1}dt$$
 
 \section{Examples}
 One example of this is the following, infinite divergent summation:
 $$1^{2}+2^{2}+3^{2}+4^{2}+...$$
 This can be represented as the function of n: $f(n)=n^{2}$, plugging this in we have:
-$$0+\sum_{n=1}^{\infty}n^{2} \stackrel{\mathbb{ℜ}}{=} i\int_{0}^{\infty}\frac{-t^{2}-t^{2}}{e^{2\pi t}-1}dt$$
+$$0+\sum_{n=1}^{\infty}n^{2} \stackrel{R}{=} i\int_{0}^{\infty}\frac{-t^{2}-t^{2}}{e^{2\pi t}-1}dt$$
 With this, we realise that this is a simple integration of 0, resulting in a constant $C$.
 $$i\int_{0}^{\infty}0dt$$
 Therefore, we have 
-$$\sum_{n=1}^{\infty}n^{2} \stackrel{\mathbb{ℜ}}{=} 0$$
+$$\sum_{n=1}^{\infty}n^{2} \stackrel{R}{=} 0$$
 
 
 Another example of this is the infinite divergent summation:
 $$1+2+3+4+5....$$
 we can use the function $f(n)=n$:
-$$0+\sum_{n=1}^{\infty}n \stackrel{\mathbb{ℜ}}{=}  i\int_{0}^{\infty}\frac{it-(-it)}{e^{2\pi t}-1}dt$$
+$$0+\sum_{n=1}^{\infty}n \stackrel{R}{=}  i\int_{0}^{\infty}\frac{it-(-it)}{e^{2\pi t}-1}dt$$
 $$=  i\int_{0}^{\infty}\frac{2it}{e^{2\pi t}-1}dt$$
 since $i$ is considered a constant, we can multiply it out, therefore it is:
 $$=  -2\int_{0}^{\infty}\frac{t}{e^{2\pi t}-1}dt$$
@@ -36,6 +37,6 @@ Seeing that this is the Bose integration problem with the solution of $\frac{\pi
 
 $$-\frac{1}{\pi^{2}}\cdot\frac{\pi^{2}}{12}=-\frac{1}{12}$$
 And therefore 
-$$1+2+3+4+...\stackrel{\mathbb{ℜ}}{=} -\frac{1}{12}$$
+$$1+2+3+4+...\stackrel{R}{=} -\frac{1}{12}$$
 
 \end{document}
